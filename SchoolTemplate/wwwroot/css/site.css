@@ -16,7 +16,7 @@ for details on configuring this project to bundle and minify static web assets. 
     /* Style the links inside the navigation bar */
     .topnav a {
         float: left;
-        color: #f2f2f2;
+        color: black;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -40,6 +40,6 @@ for details on configuring this project to bundle and minify static web assets. 
     bottom: 0;
     width: 100%;
     background-color: lightsteelblue;
-    color: white;
+    color: black;
     text-align: center;
 }
