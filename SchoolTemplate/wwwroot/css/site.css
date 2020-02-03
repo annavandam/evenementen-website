@@ -71,16 +71,19 @@ for details on configuring this project to bundle and minify static web assets. 
     text-align: center;
 }
 
-.wallpaper {
-    background-color: blue;
-    height: 60px;
-}
+
 
 body {
-    margin-top: 4%;
+    margin-top: 3%;
+    margin-left: 0;
     height: 100%;
     width: 100%;
-
-    background-image: /img/;
+    background-color: lightgoldenrodyellow;
+}
+.banner {
+    padding-left: 100%;
+    padding-bottom: 5%;
+    background-repeat: no-repeat;
+    background-image: url(/img/festival_balloons.jpg);
 }
 
