@@ -37,6 +37,7 @@ for details on configuring this project to bundle and minify static web assets. 
     /* Style the search box inside the navigation bar */
     .topnav input[type=text] {
         float: right;
+        width: 180px;
         padding: 6px;
         border: none;
         margin-top: 8px;
@@ -81,10 +82,12 @@ body {
     background-color: lightgoldenrodyellow;
 }
 .banner {
-    padding-left: 100%;
-    padding-bottom: 5%;
-    background-repeat: no-repeat;
+    padding-bottom: 10%;
     background-image: url(/img/festival_balloons.jpg);
+    opacity: 0.65;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
