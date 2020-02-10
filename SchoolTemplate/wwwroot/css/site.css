@@ -82,9 +82,8 @@ body {
     background-color: lightgoldenrodyellow;
 }
 .banner {
-    padding-bottom: 10%;
-    background-image: url(/img/festival_balloons.jpg);
-    opacity: 0.65;
+    padding-bottom: 30%;
+    background-image: url(/img/banner.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
