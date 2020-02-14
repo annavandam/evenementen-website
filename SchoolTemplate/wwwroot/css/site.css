@@ -2,7 +2,6 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 
-
 /* Add a black background color to the top navigation */
 .topnav {
     position: fixed;
@@ -11,6 +10,7 @@ for details on configuring this project to bundle and minify static web assets. 
     width: 100%;
     background-color: lightsteelblue;
     overflow: hidden;
+    font-family: "Courier New",monospace
 }
 
     /* Style the links inside the navigation bar */
@@ -70,16 +70,19 @@ for details on configuring this project to bundle and minify static web assets. 
     background-color: lightsteelblue;
     color: black;
     text-align: center;
+    font-family: "Courier New",monospace
 }
 
 
 
 body {
-    margin-top: 3%;
+    margin-top: 2.8%;
     margin-left: 0;
     height: 100%;
     width: 100%;
     background-color: lemonchiffon;
+    font-family: "Courier New",monospace;
+    color: black;
 }
 
 .banner {
@@ -127,7 +130,8 @@ input,
     display: inline-block;
     font-size: 17px;
     line-height: 20px;
-    text-decoration: none; /* remove underline from anchors */
+    text-decoration: none;
+    font-family: "Courier New",monospace; /* remove underline from anchors */
 }
 
     input:hover,
@@ -138,17 +142,14 @@ input,
 /* add appropriate colors to fb, twitter and google buttons */
 .fb {
     background-color: white;
-    color: black;
 }
 
 .twitter {
     background-color: white;
-    color: black;
 }
 
 .google {
     background-color: white;
-    color: black;
 }
 
 /* style the submit button */
@@ -160,7 +161,7 @@ input[type=submit] {
 }
 
     input[type=submit]:hover {
-        background-color: #45a049;
+        background-color: lightsteelblue;
     }
 
 /* Two-column layout */
@@ -207,8 +208,9 @@ input[type=submit] {
 /* bottom container */
 .bottom-container {
     text-align: center;
-    background-color: #666;
-    border-radius: 0px 0px 4px 4px;
+    background-color:mistyrose;
+    border: 5px solid lightsteelblue;
+    border-radius: 10px;
 }
 
 /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
@@ -247,7 +249,7 @@ input[type=submit] {
 .container {
     position: relative;
     border-radius: 5px;
-    background-color: lightsteelblue;
+    background-color: mistyrose;
     padding: 20px 0 30px 0;
 }
 
@@ -339,12 +341,7 @@ input[type=submit] {
     display: none;
 }
 
-/* bottom container */
-.bottom-container {
-    text-align: center;
-    background-color: #666;
-    border-radius: 0px 0px 4px 4px;
-}
+
 
 /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 650px) {
