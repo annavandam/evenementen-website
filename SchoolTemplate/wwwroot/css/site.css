@@ -98,12 +98,22 @@ body {
 }
 
 .box {
-    background-color: rgb(255, 93, 91);
+    background-color: mistyrose;
     font-size: 150%;
-      padding: 20px;
-    margin-right: 100px;
-
+    padding: 20px;
+    border-radius: 7px;
+    position: absolute;
+    margin-top: 27%;
+    right: 35px;
+    left: 35px;
+    text-align: center;
+    font-size: 18px;
 }
+    .box:hover {
+        background-color: rosybrown;
+        cursor: pointer;
+        transition: 
+    }
 
 
 
