@@ -90,8 +90,17 @@ body {
     background-size: cover;
 }
 
+.text {
+    margin-left: 2%;
+}
 
+.box {
+    background-color: rgb(255, 93, 91);
+    font-size: 150%;
+      padding: 20px;
+    margin-right: 100px;
 
+}
 
 
 
