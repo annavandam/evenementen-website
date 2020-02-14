@@ -119,13 +119,6 @@ body {
     box-sizing: border-box
 }
 
-/* style the container */
-.container {
-    position: relative;
-    border-radius: 5px;
-    background-color: lightsteelblue;
-    padding: 20px 0 30px 0;
-}
 
 /* style inputs and link buttons */
 input,
@@ -218,8 +211,6 @@ input[type=submit] {
 .bottom-container {
     text-align: center;
     background-color:mistyrose;
-    border: 5px solid lightsteelblue;
-    border-radius: 10px;
 }
 
 /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
@@ -238,7 +229,6 @@ input[type=submit] {
         text-align: center;
     }
 }
-
 
 
 
@@ -274,7 +264,9 @@ input,
     display: inline-block;
     font-size: 17px;
     line-height: 20px;
-    text-decoration: none; /* remove underline from anchors */
+    text-decoration: none;
+
+    /* remove underline from anchors */
 }
 
     input:hover,
@@ -300,13 +292,13 @@ input,
 
 /* style the submit button */
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: lightsteelblue;
     color: white;
     cursor: pointer;
 }
 
     input[type=submit]:hover {
-        background-color: #45a049;
+        background-color: lemonchiffon;
     }
 
 /* Two-column layout */
@@ -330,7 +322,7 @@ input[type=submit] {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    border: 2px solid #ddd;
+    border: 2px solid lightsteelblue;
     height: 175px;
 }
 
@@ -367,4 +359,21 @@ input[type=submit] {
         display: block;
         text-align: center;
     }
+}
+
+
+.atn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    border: 5px solid lightsteelblue;
+    border-radius: 10px;
+
 }
