@@ -2,7 +2,6 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 
-/* Add a black background color to the top navigation */
 .topnav {
     position: fixed;
     left: 0;
@@ -13,7 +12,6 @@ for details on configuring this project to bundle and minify static web assets. 
     font-family: "Courier New",monospace
 }
 
-    /* Style the links inside the navigation bar */
     .topnav a {
         float: left;
         color: black;
@@ -23,18 +21,15 @@ for details on configuring this project to bundle and minify static web assets. 
         font-size: 17px;
     }
 
-        /* Change the color of links on hover */
         .topnav a:hover {
             background-color: #ddd;
             color: black;
         }
 
-        /* Add a color to the active/current link */
         .topnav a.active {
             color: white;
         }
 
-    /* Style the search box inside the navigation bar */
     .topnav input[type=text] {
         float: right;
         width: 180px;
@@ -46,7 +41,6 @@ for details on configuring this project to bundle and minify static web assets. 
         color: pink;
     }
 
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 @media screen and (max-width: 600px) {
     .topnav a, .topnav input[type=text] {
         float: none;
@@ -72,8 +66,6 @@ for details on configuring this project to bundle and minify static web assets. 
     text-align: center;
     font-family: "Courier New",monospace
 }
-
-
 
 body {
     margin-top: 2.8%;
@@ -113,24 +105,13 @@ body {
         background-color: rosybrown;
         cursor: pointer;
         transition: 
+
     }
-
-
-
-
-
-
-
-
-
-
 
 * {
     box-sizing: border-box
 }
 
-
-/* style inputs and link buttons */
 input,
 .btn {
     width: 100%;
@@ -151,32 +132,17 @@ input,
         opacity: 1;
     }
 
-/* add appropriate colors to fb, twitter and google buttons */
-.fb {
-    background-color: white;
-}
-
-.twitter {
-    background-color: white;
-}
-
-.google {
-    background-color: white;
-}
-
-/* style the submit button */
 input[type=submit] {
     background-color: #4CAF50;
-    color: white;
+    color: black;
     cursor: pointer;
->>>>>>> 1732a77906b0b4e426ab53220e7c006aaa85dbc7
 }
 
     input[type=submit]:hover {
         background-color: lightsteelblue;
+        color: black;
     }
 
-/* Two-column layout */
 .col {
     float: left;
     width: 50%;
@@ -185,14 +151,12 @@ input[type=submit] {
     margin-top: 6px;
 }
 
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* vertical line */
 .vl {
     position: absolute;
     left: 50%;
@@ -201,7 +165,6 @@ input[type=submit] {
     height: 175px;
 }
 
-/* text inside the vertical line */
 .inner {
     position: absolute;
     top: 50%;
@@ -212,57 +175,43 @@ input[type=submit] {
     padding: 8px 10px;
 }
 
-/* hide some text on medium and large screens */
 .hide-md-lg {
     display: none;
 }
 
-/* bottom container */
 .bottom-container {
     text-align: center;
     background-color:mistyrose;
 }
 
-/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 650px) {
     .col {
         width: 100%;
         margin-top: 0;
     }
-    /* hide the vertical line */
+
     .vl {
         display: none;
     }
-    /* show the hidden text on small screens */
+
     .hide-md-lg {
         display: block;
         text-align: center;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 * {
     box-sizing: border-box
 }
 
-/* style the container */
 .container {
     position: relative;
     border-radius: 5px;
     background-color: mistyrose;
     padding: 20px 0 30px 0;
+    font-size: 10px;
 }
 
-/* style inputs and link buttons */
 input,
 .btn {
     width: 100%;
@@ -275,8 +224,9 @@ input,
     font-size: 17px;
     line-height: 20px;
     text-decoration: none;
-
-    /* remove underline from anchors */
+    border: 5px solid lightsteelblue;
+    border-radius: 10px;
+    color:black;
 }
 
     input:hover,
@@ -284,23 +234,6 @@ input,
         opacity: 1;
     }
 
-/* add appropriate colors to fb, twitter and google buttons */
-.fb {
-    background-color:white;
-    color: black;
-}
-
-.twitter {
-    background-color: white;
-    color: black;
-}
-
-.google {
-    background-color: white;
-    color: black;
-}
-
-/* style the submit button */
 input[type=submit] {
     background-color: lightsteelblue;
     color: white;
@@ -311,7 +244,6 @@ input[type=submit] {
         background-color: lemonchiffon;
     }
 
-/* Two-column layout */
 .col {
     float: left;
     width: 50%;
@@ -320,14 +252,12 @@ input[type=submit] {
     margin-top: 6px;
 }
 
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* vertical line */
 .vl {
     position: absolute;
     left: 50%;
@@ -336,7 +266,6 @@ input[type=submit] {
     height: 175px;
 }
 
-/* text inside the vertical line */
 .inner {
     position: absolute;
     top: 50%;
@@ -347,30 +276,25 @@ input[type=submit] {
     padding: 8px 10px;
 }
 
-/* hide some text on medium and large screens */
 .hide-md-lg {
     display: none;
 }
 
-
-
-/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 650px) {
     .col {
         width: 100%;
         margin-top: 0;
     }
-    /* hide the vertical line */
+
     .vl {
         display: none;
     }
-    /* show the hidden text on small screens */
+
     .hide-md-lg {
         display: block;
         text-align: center;
     }
 }
-
 
 .atn {
     width: 100%;
@@ -385,5 +309,14 @@ input[type=submit] {
     text-decoration: none;
     border: 5px solid lightsteelblue;
     border-radius: 10px;
+}
 
+.atn:hover{
+    background-color: lemonchiffon;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: lemonchiffon;
+    cursor: pointer;
 }
