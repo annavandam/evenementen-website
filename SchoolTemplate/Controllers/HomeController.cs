@@ -52,39 +52,46 @@ namespace SchoolTemplate.Controllers
       return products;
     }
 
-        private List<festival> Getfestivals()
+        private List<Festival> GetFestivals()
         {
-            List<Product> festival = new List<Festival>();
+            List<Product> Festivals = new List<Festival>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from festival", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from Festival", conn);
 
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        festival p = new festival
+                        Festival p = new Festival
                         {
                             id = Convert.ToInt32(reader["id"]),
                             naam = reader["naam"].ToString(),
                             informatie = reader["informatie"].ToString(),
-                            datum = DatumTime.Parse(reader["datum"].ToString()
+                            datum = DateTime.Parse(reader["datum"].ToString()
                         };
-                        festial.Add(p);
+                        festivals.Add(f);
                     }
                 }
             }
 
-            return festival;
+            return Festival;
         }
 
 
-        public IActionResult Contact()
+    public IActionResult Contact()
     {
         return View();
     }
+
+    [Route("festival/{id}")]
+    public IActionResult Festival(string id)
+        {
+            ViewData["id"] = id;
+            return View();
+        }
 
     public IActionResult Tickets()
     {
