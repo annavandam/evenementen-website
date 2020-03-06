@@ -14,47 +14,15 @@ namespace SchoolTemplate.Controllers
     string connectionString = "Server=172.16.160.21;Port=3306;Database=110274;Uid=110274;Pwd=rairLefs;";
 
     public IActionResult Index()
-    {
-      List<Product> products = new List<Product>();
-      // uncomment deze regel om producten uit je database toe te voegen
-      products = GetProducts();
-
-      return View(products);
+    {    
+        List<Festival> festivals = GetFestivals();
+            
+        return View(festivals);
     }
-
-    private List<Product> GetProducts()
-    {
-      List<Product> products = new List<Product>();
-
-      using (MySqlConnection conn = new MySqlConnection(connectionString))
-      {
-        conn.Open();
-        MySqlCommand cmd = new MySqlCommand("select * from product", conn);
-
-        using (var reader = cmd.ExecuteReader())
+        
+    private List<Festival> GetFestivals()
         {
-          while (reader.Read())
-          {
-            Product p = new Product
-            {
-              Id = Convert.ToInt32(reader["Id"]),
-              Naam = reader["Naam"].ToString(),
-              Calorieen = float.Parse(reader["calorieen"].ToString()),
-              Formaat = reader["Formaat"].ToString(),
-              Gewicht = Convert.ToInt32(reader["Gewicht"].ToString()),
-              Prijs = Decimal.Parse(reader["Prijs"].ToString())
-            };
-            products.Add(p);
-          }
-        }
-      }
-
-      return products;
-    }
-
-        private List<Festival> GetFestivals()
-        {
-            List<Product> Festivals = new List<Festival>();
+            List<Festival> festivals = new List<Festival>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -65,19 +33,19 @@ namespace SchoolTemplate.Controllers
                 {
                     while (reader.Read())
                     {
-                        Festival p = new Festival
+                        Festival f = new Festival
                         {
-                            id = Convert.ToInt32(reader["id"]),
-                            naam = reader["naam"].ToString(),
-                            informatie = reader["informatie"].ToString(),
-                            datum = DateTime.Parse(reader["datum"].ToString()
+                            Id = Convert.ToInt32(reader["id"]),
+                            Naam = reader["naam"].ToString(),
+                            Informatie = reader["informatie"].ToString(),
+                            Datum = DateTime.Parse(reader["datum"].ToString())
                         };
                         festivals.Add(f);
                     }
                 }
             }
 
-            return Festival;
+            return festivals;
         }
 
 

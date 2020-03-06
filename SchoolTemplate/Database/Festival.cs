@@ -8,16 +8,9 @@ namespace SchoolTemplate.Database
     
     public string Naam { get; set; }
 
-    public string Formaat { get; set; }    
+    public string Informatie { get; set; }
 
-    /// hallootjes wouter
-    /// Gebruik altijd decimal voor geldzaken. Dit doe je om te voorkomen dat er afrondingsfouten optreden
-    /// </summary>
-    public Decimal Prijs { get; set; }
-
-    public int Gewicht { get; set; }
-
-    public float Calorieen { get; set; }
+    public DateTimeOffset Datum { get; set; }
 
   }
 }

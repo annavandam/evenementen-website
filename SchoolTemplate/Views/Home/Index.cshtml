@@ -1,5 +1,5 @@
 ﻿@using SchoolTemplate.Database;
-@model List<Product>
+@model List<Festival>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -7,23 +7,24 @@
 <!--
 <div class="text-center">
   <h1 class="display-4">Welcome</h1>
-  <ul>
-    @foreach (Product p in Model)
-    {
-      <li>
-        @p.Naam @p.Prijs euro
-      </li>
-    }
-  </ul>
+
+
+  
   <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
   <h2> DE APPELBAK</h2>
 </div> -->
+    <ul>
+        @foreach (Festival f in Model)
+        {
+            <li>
+                @f.Naam @f.Informatie euro
+            </li>
+        }
+    </ul>
 
 
-
-    
-        <div class="banner">
-            <p class="box"> Koop nu tickets voor het eerst volgende festival: De Feesttent!</p>
-        </div>
-        <h1 class="text"> Home</h1>
+    <div class="banner">
+        <p class="box"> Koop nu tickets voor het eerst volgende festival: De Feesttent!</p>
+    </div>
+    <h1 class="text"> Home</h1>
 
