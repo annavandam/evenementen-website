@@ -11,7 +11,7 @@ namespace SchoolTemplate.Controllers
   public class HomeController : Controller
   {
     // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
-    string connectionString = "Server=172.16.160.21;Port=3306;Database=110274;Uid=110274;Pwd=rairLefs;";
+    string connectionString = "Server=172.16.160.21;Port=3306;Database=110270;Uid=110270;Pwd=fAntuNfi;";
 
     public IActionResult Index()
     {    
@@ -27,7 +27,7 @@ namespace SchoolTemplate.Controllers
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from Festival", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from festival", conn);
 
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -35,7 +35,7 @@ namespace SchoolTemplate.Controllers
                     {
                         Festival f = new Festival
                         {
-                            Id = Convert.ToInt32(reader["id"]),
+                            Id = Convert.ToInt32(reader["festival_id"]),
                             Naam = reader["naam"].ToString(),
                             Informatie = reader["informatie"].ToString(),
                             Datum = DateTime.Parse(reader["datum"].ToString())
