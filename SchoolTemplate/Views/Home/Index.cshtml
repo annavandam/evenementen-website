@@ -13,14 +13,6 @@
   <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
   <h2> DE APPELBAK</h2>
 </div> -->
-<ul>
-    @foreach (Festival f in Model)
-    {
-        <li>
-            @f.Naam is een @f.Informatie op @f.Datum
-        </li>
-    }
-</ul>
 
 
 <div class="banner">
@@ -29,43 +21,23 @@
 <h1 class="text"> Home</h1>
 
 
-@foreach (Festival f in Model)
-{
-<table>
+
+
+<table class="text">
     <tr>
         <th>Festival naam</th>
         <th>Informatie</th>
         <th>Datum</th>
     </tr>
-    <tr>
-        <td>@f.Naam</td>
-        <td>@f.Informatie</td>
-        <td>@f.Datum</td>
-    </tr>
-    <tr>
-        <td>@f.Naam</td>
-        <td>@f.Informatie</td>
-        <td>@f.Datum</td>
-    </tr>
-    <tr>
-        <td>@f.Naam</td>
-        <td>@f.Informatie</td>
-        <td>@f.Datum</td>
-    </tr>
-    <tr>
-        <td>@f.Naam</td>
-        <td>@f.Informatie</td>
-        <td>@f.Datum</td>
-    </tr>
-    <tr>
-        <td>@f.Naam</td>
-        <td>@f.Informatie</td>
-        <td>@f.Datum</td>
-    </tr>
-    <tr>
-        <td>@f.Naam</td>
-        <td>@f.Informatie</td>
-        <td>@f.Datum</td>
-    </tr>
+
+    @foreach (Festival f in Model)
+    {
+        <tr>
+            <td>@f.Naam</td>
+            <td>@f.Informatie</td>
+            <td>@f.Datum.ToString("dd MMMM yyyy")</td>
+        </tr>
+    }
+
 </table>
-}
+
