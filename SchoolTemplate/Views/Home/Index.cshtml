@@ -9,60 +9,63 @@
   <h1 class="display-4">Welcome</h1>
 
 
-  
+
   <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
   <h2> DE APPELBAK</h2>
 </div> -->
-    <ul>
-        @foreach (Festival f in Model)
-        {
-            <li>
-                @f.Naam is een @f.Informatie op @f.Datum
-            </li>
-        }
-    </ul>
+<ul>
+    @foreach (Festival f in Model)
+    {
+        <li>
+            @f.Naam is een @f.Informatie op @f.Datum
+        </li>
+    }
+</ul>
 
 
-    <div class="banner">
-        <p class="box"> Koop nu tickets voor het eerst volgende festival: De Feesttent!</p>
-    </div>
-    <h1 class="text"> Home</h1>
+<div class="banner">
+    <p class="box"> Koop nu tickets voor het eerst volgende festival: De Feesttent!</p>
+</div>
+<h1 class="text"> Home</h1>
 
-    <table>
-        <tr>
-            <th>Festival naam</th>
-            <th></th>
-            <th>Datum</th>
-        </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-        </tr>
-        <tr>
-            <td>Ernst Handel</td>
-            <td>Roland Mendel</td>
-            <td>Austria</td>
-        </tr>
-        <tr>
-            <td>Island Trading</td>
-            <td>Helen Bennett</td>
-            <td>UK</td>
-        </tr>
-        <tr>
-            <td>Laughing Bacchus Winecellars</td>
-            <td>Yoshi Tannamuri</td>
-            <td>Canada</td>
-        </tr>
-        <tr>
-            <td>Magazzini Alimentari Riuniti</td>
-            <td>Giovanni Rovelli</td>
-            <td>Italy</td>
-        </tr>
-    </table>
 
+@foreach (Festival f in Model)
+{
+<table>
+    <tr>
+        <th>Festival naam</th>
+        <th>Informatie</th>
+        <th>Datum</th>
+    </tr>
+    <tr>
+        <td>@f.Naam</td>
+        <td>@f.Informatie</td>
+        <td>@f.Datum</td>
+    </tr>
+    <tr>
+        <td>@f.Naam</td>
+        <td>@f.Informatie</td>
+        <td>@f.Datum</td>
+    </tr>
+    <tr>
+        <td>@f.Naam</td>
+        <td>@f.Informatie</td>
+        <td>@f.Datum</td>
+    </tr>
+    <tr>
+        <td>@f.Naam</td>
+        <td>@f.Informatie</td>
+        <td>@f.Datum</td>
+    </tr>
+    <tr>
+        <td>@f.Naam</td>
+        <td>@f.Informatie</td>
+        <td>@f.Datum</td>
+    </tr>
+    <tr>
+        <td>@f.Naam</td>
+        <td>@f.Informatie</td>
+        <td>@f.Datum</td>
+    </tr>
+</table>
+}
