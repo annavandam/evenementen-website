@@ -54,8 +54,8 @@ namespace SchoolTemplate.Controllers
         return View();
     }
 
-    [Route("festival/{id}")]
-    public IActionResult Festival(string id)
+    [Route("festival/{id}/{naam}")]
+    public IActionResult Festival(int id, string naam)
         {
             ViewData["id"] = id;
             return View();

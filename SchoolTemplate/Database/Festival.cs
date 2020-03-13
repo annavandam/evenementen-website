@@ -11,6 +11,8 @@ namespace SchoolTemplate.Database
     public string Informatie { get; set; }
 
     public DateTimeOffset Datum { get; set; }
+    
+    public string Meerinfo { get; set; }
 
-  }
+    }
 }
