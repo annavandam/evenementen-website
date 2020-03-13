@@ -337,3 +337,27 @@ input[type=submit] {
     background-color: lemonchiffon;
     cursor: pointer;
 }
+
+.huisregels {
+    background-color: mistyrose;
+    font-size: 150%;
+    padding: 20px;
+    position: absolute;
+    margin-top: 27%;
+    right: 35px;
+    left: 35px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.nieuws {
+    background-color: mistyrose;
+    font-size: 150%;
+    padding: 20px;
+    position: absolute;
+    margin-top: 27%;
+    right: 35px;
+    left: 35px;
+    text-align: center;
+    font-size: 18px;
+}
