@@ -28,6 +28,7 @@
         <th>Festival naam</th>
         <th>Informatie</th>
         <th>Datum</th>
+        <th>Meer informatie</th>
     </tr>
 
     @foreach (Festival f in Model)
@@ -36,6 +37,7 @@
             <td>@f.Naam</td>
             <td>@f.Informatie</td>
             <td>@f.Datum.ToString("dd MMMM yyyy")</td>
+            <td><a href="/Festival/@f.Naam">Lees meer...</a></td>
         </tr>
     }
 
