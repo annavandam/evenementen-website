@@ -117,18 +117,19 @@ tr:nth-child(even) {
     left: 35px;
     text-align: center;
     font-size: 18px;
+
 }
     .box:hover {
         background-color: rosybrown;
         cursor: pointer;
-        transition: 
-
+        border: 2px solid black;
+        border-radius: 12px;
     }
 
 * {
     box-sizing: border-box
 }
-
+/*
 input,
 .btn {
     width: 100%;
@@ -141,7 +142,7 @@ input,
     font-size: 17px;
     line-height: 20px;
     text-decoration: none;
-    font-family: "Courier New",monospace; /* remove underline from anchors */
+    font-family: "Courier New",monospace; 
 }
 
     input:hover,
@@ -159,7 +160,7 @@ input[type=submit] {
         background-color: lightsteelblue;
         color: black;
     }
-
+    */
 .col {
     float: left;
     width: 50%;
@@ -228,7 +229,7 @@ input[type=submit] {
     padding: 20px 0 30px 0;
     font-size: 10px;
 }
-
+/*
 input,
 .btn {
     width: 100%;
@@ -260,7 +261,7 @@ input[type=submit] {
     input[type=submit]:hover {
         background-color: lemonchiffon;
     }
-
+    */
 .col {
     float: left;
     width: 50%;
