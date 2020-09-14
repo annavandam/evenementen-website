@@ -7,3 +7,37 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+[Route("contact")]
+
+public IActoinResult Contact()
+{
+return View();
+}
+
+[Route("contact")]
+[HttpPost]
+
+public IActoinResult Contact(string voornaam, string achternaam)
+{
+return View();
+}
+
+
+
+
+
+using System;
+
+namespace Schooltemplate.Models
+{
+
+  public class PersonModel
+  {
+    public string Voornaam { get; set; }
+    
+    public string Achternaam { get; set; }
+
+    public DateTime Geboortedatum { get; set; }
+   }
+}
