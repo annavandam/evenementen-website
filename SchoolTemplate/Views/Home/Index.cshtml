@@ -1,5 +1,5 @@
 ﻿@using SchoolTemplate.Database;
-@model List<festival>
+@model List<Festival>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -31,13 +31,13 @@
         <th>Meer informatie</th>
     </tr>
 
-    @foreach (festival f in Model)
+    @foreach (Festival f in Model)
     {
         <tr>
-            <td>@f.naam</td>
-            <td>@f.korte_info</td>
-            <td>@f.begin_datum.ToString("dd MMMM yyyy")</td>
-            <td><a href="/Festival/@f.id/@f.naam">Lees meer...</a></td>
+            <td>@f.Naam</td>
+            <td>@f.Korte_info</td>
+            <td>@f.Begin_datum.ToString("dd MMMM yyyy")</td>
+            <td><a href="/Festival/@f.Id/@f.Naam">Lees meer...</a></td>
         </tr>
     }
 

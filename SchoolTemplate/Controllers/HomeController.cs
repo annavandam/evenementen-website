@@ -16,14 +16,14 @@ namespace SchoolTemplate.Controllers
 
         public IActionResult Index()
         {
-            List<festival> festivals = GetFestivals();
+            List<Festival> festivals = GetFestivals();
 
             return View(festivals);
         }
 
-        private List<festival> GetFestivals()
+        private List<Festival> GetFestivals()
         {
-            List<festival> festivals = new List<festival>();
+            List<Festival> festivals = new List<Festival>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -34,14 +34,14 @@ namespace SchoolTemplate.Controllers
                 {
                     while (reader.Read())
                     {
-                        festival f = new festival
+                        Festival f = new Festival
                         {
-                            id = Convert.ToInt32(reader["id"]),
-                            naam = reader["naam"].ToString(),
-                            korte_info = reader["korte_info"].ToString(),
-                            lange_info = reader["lange_info"].ToString(),
-                            begin_datum = DateTime.Parse(reader["begin_datum"].ToString()),
-                            eind_datum = DateTime.Parse(reader["eind_datum"].ToString())
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["Naam"].ToString(),
+                            Korte_info = reader["Korte_info"].ToString(),
+                            Lange_info = reader["Lange_info"].ToString(),
+                            Begin_datum = DateTime.Parse(reader["Begin_datum"].ToString()),
+                            Eind_datum = DateTime.Parse(reader["Eind_datum"].ToString())
                         };
                         festivals.Add(f);
                     }
