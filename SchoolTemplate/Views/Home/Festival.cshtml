@@ -1,16 +1,19 @@
-﻿@{ 
+﻿@model SchoolTemplate.Database.Festival  
+@{ 
     ViewData["Title"] = "Festival";
 
 }
-<h1>Nadere informatie festival:@ViewData["id"] @ViewData["naam"]</h1>
+<h1>@Model.Naam</h1>
 
 <div>
     <!-- Hier komt uitleg over het bepaalde festival-->
-    <p> @ViewData["Meerinfo"] </p>
+    <p> @Model.Lange_info <br>
+    Vanaf: @Model.Begin_datum.ToString("dd MMMM yyyy") tot en met @Model.Eind_datum.ToString("dd MMMM yyyy")
+    </p>
 </div>
 
 <div>
-     <h3> Platte grond: </h3>
+     <h3>  </h3>
 </div>
 
 <div class="nieuws">
@@ -20,8 +23,3 @@
 <div class="huisregels">
     <h5> Huisregels:</h5>
 </div>
-
-<form method="post">
-    <input type="text" name="naampie"/>
-    <input type="submit" />
-</form>
