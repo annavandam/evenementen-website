@@ -1,8 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Ticketspagina";
+    List<Festival> festivals = ViewData["keuzes"] as List<Festival>;
 }
 @using SchoolTemplate.Database;
-@model List<Festival>
+
+@model PersonModel
 
 
 
@@ -16,7 +18,7 @@
     <form>
         <label for="festivals">Kies een festival:</label>
         <select name="festival" id="festivals">
-            @foreach (Festival f in Model)
+            @foreach (Festival f in festivals)
             {
                 <option value="@f.Naam">@f.Naam</option>
             }
@@ -25,7 +27,13 @@
         <br><br>
         <label for="quantity">Hoeveel tickets wilt u (er geldt een maximum van 10 tickets per aankoop):</label>
         <input type="number" id="quantity" name="quantity" min="1" max="10">
-        <input type="submit">
-        <input type="submit" value="Submit">
+        <input type="text" name="voornaam" placeholder="Voornaam" />
+        <input type="text" name="achternaam" placeholder="Achternaam" />
+        @Html.ValidationMessageFor(m => m.Achternaam) <br />
+        <input type="text" name="email" placeholder="e-mail" />
+        @Html.ValidationMessageFor(m => m.Email) <br />
+        <p>geboortedatum:</p>
+        <input type="datetime" name="geboortedatum" />
+        <input type="submit" value="vestuur" />
     </form>
 </div>

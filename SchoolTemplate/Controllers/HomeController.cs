@@ -142,9 +142,17 @@ namespace SchoolTemplate.Controllers
         public IActionResult Tickets()
         {
             List<Festival> festivals = GetFestivals();
+            ViewData["keuzes"] = festivals;
+            return View(new PersonModel());
 
-            return View(festivals);
-
+        }
+        
+        [HttpPost]
+        public IActionResult Tickets(PersonModel model)
+        {
+            List<Festival> festivals = GetFestivals();
+            ViewData["keuzes"] = festivals;
+            return View(model);
         }
         public IActionResult LogIn()
         {
