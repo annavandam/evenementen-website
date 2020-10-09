@@ -141,7 +141,10 @@ namespace SchoolTemplate.Controllers
 
         public IActionResult Tickets()
         {
-            return View();
+            List<Festival> festivals = GetFestivals();
+
+            return View(festivals);
+
         }
         public IActionResult LogIn()
         {
