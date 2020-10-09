@@ -3,23 +3,28 @@
     ViewData["Title"] = "Festival";
 
 }
-<h1>@Model.Naam</h1>
+    <div class="text">
+        <h1>@Model.Naam</h1>
 
-<div>
-    <!-- Hier komt uitleg over het bepaalde festival-->
-    <p> @Model.Lange_info <br>
-    Vanaf: @Model.Begin_datum.ToString("dd MMMM yyyy") tot en met @Model.Eind_datum.ToString("dd MMMM yyyy")
-    </p>
-</div>
+        <div class="festivalbox">
+            <!-- Hier komt uitleg over het bepaalde festival-->
+            <h2>Omschrijving</h2>
+            <p>
+                @Model.Lange_info <br> <br>
+            </p>
+        </div>
 
-<div>
-     <h3>  </h3>
-</div>
 
-<div class="nieuws">
-    <h4> Het nieuws:</h4>
-</div>
+        <div class="festivalbox">
+            <h2> Wanneer?</h2>
+            <p> Vanaf: @Model.Begin_datum.ToString("dd MMMM yyyy") tot en met @Model.Eind_datum.ToString("dd MMMM yyyy")</p>
+        </div>
 
-<div class="huisregels">
-    <h5> Huisregels:</h5>
-</div>
+        <div class="nieuws">
+            <h4> Het nieuws:</h4>
+        </div>
+
+        <div class="huisregels">
+            <h5> Huisregels:</h5>
+        </div>
+    </div>

@@ -79,6 +79,35 @@ namespace SchoolTemplate.Controllers
             return festivals[0];
         }
 
+        private Festival GetFisrstFestival(string id)
+        {
+            List<Festival> festivals = new List<Festival>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"select min(Begin_datum), id, naam from festival", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Festival f = new Festival
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["Naam"].ToString(),
+                            Korte_info = reader["Korte_info"].ToString(),
+                            Lange_info = reader["Lange_info"].ToString(),
+                            Begin_datum = DateTime.Parse(reader["Begin_datum"].ToString()),
+                            Eind_datum = DateTime.Parse(reader["Eind_datum"].ToString())
+                        };
+                        festivals.Add(f);
+                    }
+                }
+            }
+            return festivals[0];
+        }
+
         [Route("contact")]
         public IActionResult Contact()
         {
@@ -112,7 +141,10 @@ namespace SchoolTemplate.Controllers
 
         public IActionResult Tickets()
         {
-            return View();
+            List<Festival> festivals = GetFestivals();
+
+            return View(festivals);
+
         }
         public IActionResult LogIn()
         {

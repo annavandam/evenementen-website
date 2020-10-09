@@ -1,43 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Ticketspagina";
 }
+@using SchoolTemplate.Database;
+@model List<Festival>
 
 
 
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="festivalbox">
+    <p>
+        Kies hier de website waar u heen wil en bestel uw tickets!
+    </p>
 
-[Route("contact")]
+    <form>
+        <label for="festivals">Kies een festival:</label>
+        <select name="festival" id="festivals">
+            @foreach (Festival f in Model)
+            {
+                <option value="@f.Naam">@f.Naam</option>
+            }
 
-public IActoinResult Contact()
-{
-return View();
-}
-
-[Route("contact")]
-[HttpPost]
-
-public IActoinResult Contact(string voornaam, string achternaam)
-{
-return View();
-}
-
-
-
-
-
-using System;
-
-namespace Schooltemplate.Models
-{
-
-  public class PersonModel
-  {
-    public string Voornaam { get; set; }
-    
-    public string Achternaam { get; set; }
-
-    public DateTime Geboortedatum { get; set; }
-   }
-}
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
