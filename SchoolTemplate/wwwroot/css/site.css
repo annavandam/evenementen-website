@@ -112,6 +112,14 @@ body {
     background-size: cover;
 }
 
+.recensies {
+    padding: 150px 25px;
+    margin: 50px;
+    background-image: url(/img/recensies.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .text {
     margin-left: 2%;
 }
@@ -156,7 +164,7 @@ tr:nth-child(even) {
 * {
     box-sizing: border-box
 }
-/*
+
 input,
 .btn {
     width: 100%;
@@ -187,7 +195,7 @@ input[type=submit] {
         background-color: lightsteelblue;
         color: black;
     }
-    */
+
 .col {
     float: left;
     width: 50%;
