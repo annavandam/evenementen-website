@@ -14,6 +14,7 @@ namespace SchoolTemplate.Controllers
         // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
         string connectionString = "Server=172.16.160.21;Port=3306;Database=110270;Uid=110270;Pwd=fAntuNfi;";
 
+
         public IActionResult Index()
         {
             List<Festival> festivals = GetFestivals();
@@ -138,7 +139,7 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-
+        [Route("Tickets")]
         public IActionResult Tickets()
         {
             List<Festival> festivals = GetFestivals();
@@ -154,6 +155,7 @@ namespace SchoolTemplate.Controllers
             ViewData["keuzes"] = festivals;
             return View(model);
         }
+        [Route("LogIn")]
         public IActionResult LogIn()
         {
             return View();

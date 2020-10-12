@@ -147,7 +147,7 @@ tr:nth-child(even) {
     padding: 20px;
     border-radius: 7px;
     position: absolute;
-    /*   margin-top: 27%;*/
+    margin-top: 27%;
     right: 35px;
     left: 35px;
     text-align: center;
@@ -384,6 +384,6 @@ input,
     background-color: #edf2f7;
     padding: 3px 10px 0px 8px;
     margin-right: 8%;
-    margin-bottom: 10px;
+    margin-bottom: 80px;
     border-radius: 10px;
 }
