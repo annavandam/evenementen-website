@@ -387,3 +387,19 @@ input,
     margin-bottom: 80px;
     border-radius: 10px;
 }
+
+.vraag {
+    background-color: #edf2f7;
+    padding: 3px 10px 0px 8px;
+    margin-right: 8%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.festivaltereininfo {
+    background-color: #edf2f7;
+    padding: 3px 10px 0px 8px;
+    margin-right: 8%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}

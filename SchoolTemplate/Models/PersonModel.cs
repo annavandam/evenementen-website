@@ -9,6 +9,7 @@ namespace SchoolTemplate.Models
 {
         public class PersonModel
         {
+             
             public string Voornaam { get; set; }
             [Required(ErrorMessage = "Achternaam is verplicht")]
             public string Achternaam { get; set; }
@@ -16,7 +17,7 @@ namespace SchoolTemplate.Models
             [Required]
             [EmailAddress]
             public string Email { get; set; }
-            public DateTime Geboortedatum { get; set; }
+            public string Vraag { get; set; }
         }
 }
 

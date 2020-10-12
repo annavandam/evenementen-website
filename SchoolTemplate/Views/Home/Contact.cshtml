@@ -2,24 +2,64 @@
 @{
     ViewData["Title"] = "Contact";
 }
-<h1>Contact</h1>
+<h2>Contact</h2>
+
+
+<div class="festivaltereininfo">
+    <p>
+        Over ons:
+    </p>
+    <p2>
+        Festivalterrein de Appelbal <br/>
+
+        Oude Vest 33e <br />
+
+        2312 XR te Gronongen <br />
+
+        Telefoon: 071- 5141036 <br />
+
+        Het festivalterrein is uitsluitend geopend tijdens voorstellingen. <br />
+    </p2>
+</div>
+
+<div class="Route">
+    <p>
+
+
+    </p>
+
+
+</div>
+
+<div class="vraag">
+    <p4>
+        Vragen?
+    </p4>
+        <form method="post">
+            <p5> Voornaam:</p5>
+            <input type="text" name="voornaam" placeholder="Robin" />
+            @Html.ValidationMessageFor(m => m.Voornaam) <br />
+            <p6>Achternaam:</p6>
+            <input type="text" name="achternaam" placeholder="Jansen" />
+            @Html.ValidationMessageFor(m => m.Achternaam) <br />
+            <p7>Mail:</p7>
+            <input type="text" name="email" placeholder="robin123@gmail.com" />
+            @Html.ValidationMessageFor(m => m.Email) <br />
+            <p8>Uw vraag:</p8>
+            <input type="text" name="vraag" placeholder="Welke datum is dit festival: ... ?" />
+            @Html.ValidationMessageFor(m => m.Vraag) <br />
+            <input type="submit" value="vestuur" />
+        </form>
+
+
+</div>
+
 @if (Model != null)
 {
     <p>
         Je voornaam is: @Model.Voornaam <br />
         Je achternaam is: @Model.Achternaam <br />
+        Je Email is: @Model.Email <br/>
+        Je vraag is: @Model.Vraag <br/>
     </p>
-
 }
-
-
-<form method="post">
-    <input type="text" name="voornaam" placeholder="Voornaam" />
-    <input type="text" name="achternaam" placeholder="Achternaam" />
-    @Html.ValidationMessageFor(m => m.Achternaam) <br />
-    <input type="text" name="email" placeholder="e-mail" />
-    @Html.ValidationMessageFor(m => m.Email) <br />
-    <p>geboortedatum:</p>
-    <input type="datetime" name="geboortedatum" />
-    <input type="submit" value="vestuur" />
-</form>
