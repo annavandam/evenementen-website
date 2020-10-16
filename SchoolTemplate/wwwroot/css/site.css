@@ -417,3 +417,10 @@ input,
     margin-bottom: 10px;
     border-radius: 10px;
 }
+
+.afbeeldinggelukt {
+    background-image: url(/img/logo.png);
+    padding: 100px;
+    margin: 100px;
+    background-repeat: no-repeat;
+}
