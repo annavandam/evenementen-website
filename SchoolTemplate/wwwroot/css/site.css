@@ -390,7 +390,7 @@ input,
 
 .vraag {
     background-color: #edf2f7;
-    padding: 3px 10px 0px 8px;
+    padding: 3px 10px 60px 8px;
     margin-right: 8%;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -398,7 +398,7 @@ input,
 
 .festivaltereininfo {
     background-color: #edf2f7;
-    padding: 3px 10px 0px 8px;
+    padding: 3px 10px 30px 8px;
     margin-right: 8%;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -408,4 +408,12 @@ input,
     width: 100%;
     height: 500px;
     background-size: cover;
+}
+
+.route {
+    background-color: #edf2f7;
+    padding: 3px 10px 30px 8px;
+    margin-right: 8%;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
