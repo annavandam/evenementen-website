@@ -16,6 +16,8 @@ namespace SchoolTemplate.Database
 
     public DateTimeOffset Eind_datum { get; set; }
 
+    public string Afbeelding { get; set; }
+
 
     }
 }
