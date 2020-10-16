@@ -124,7 +124,7 @@ namespace SchoolTemplate.Controllers
                 return View(model);
 
             SavePerson(model);
-            return View();
+            return Redirect("/gelukt");
         }
         private void SavePerson(PersonModel person)
         {
@@ -177,11 +177,7 @@ namespace SchoolTemplate.Controllers
             ViewData["keuzes"] = festivals;
             return View(model);
         }
-        [Route("LogIn")]
-        public IActionResult LogIn()
-        {
-            return View();
-        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -189,6 +185,11 @@ namespace SchoolTemplate.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        [Route("LogIn")]
+        public IActionResult LogIn()
+        {
+            return View();
+        }
 
 
 
