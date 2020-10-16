@@ -1,8 +1,14 @@
-﻿@{
+﻿<!--
+    De form in de contact pagina wordt opgeslagen, in de ticket pagina niet. Als u de website wil proberen gebruik dan de contact pagina formulier.
+-->
+
+@{
     ViewData["Title"] = "Ticketspagina";
     List<Festival> festivals = ViewData["keuzes"] as List<Festival>;
 }
 @using SchoolTemplate.Database;
+
+
 
 @model PersonModel
 
@@ -15,7 +21,7 @@
         Kies hier de website waar u heen wil en bestel uw tickets!
     </p>
 
-    
+
     <form>
         <label for="festivals">Kies een festival:</label>
         <select name="festival" id="festivals">

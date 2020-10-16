@@ -419,6 +419,9 @@ input,
     border-radius: 10px;
 }
 
-form {
-    margin-bottom: 50px;
+.afbeeldinggelukt {
+    background-image: url(/img/logo.png);
+    padding: 100px;
+    margin: 100px;
+    background-repeat: no-repeat;
 }

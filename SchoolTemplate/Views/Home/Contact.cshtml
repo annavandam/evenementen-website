@@ -1,31 +1,35 @@
-﻿@model PersonModel
+﻿<!--
+    De form in de contact pagina wordt opgeslagen, in de ticket pagina niet. Als u de website wil proberen gebruik dan de contact pagina formulier.
+-->
+
+@model PersonModel
 @{
     ViewData["Title"] = "Contact";
 }
 <h2>Contact</h2>
 
 <div class="festivaltereininfo">
-<h1>
-    Over ons:
-</h1>
-<p2>
-    Festivalterrein de Appelbal <br />
+    <h1>
+        Over ons:
+    </h1>
+    <p2>
+        Festivalterrein de Appelbal <br />
 
-    Oude Vest 33e <br />
+        Oude Vest 33e <br />
 
-    2312 XR te Gronongen <br />
+        2312 XR te Gronongen <br />
 
-    Telefoon: 071- 5141036 <br />
+        Telefoon: 071- 5141036 <br />
 
-    Het festivalterrein is uitsluitend geopend tijdens voorstellingen. <br />
-</p2>
-    </div>
+        Het festivalterrein is uitsluitend geopend tijdens voorstellingen. <br />
+    </p2>
+</div>
 
 <div class="route">
     <h1>
         Route:
     </h1>
-    <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3" style="margin-left:300px">
+    <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3" style="margin-left:100px">
         <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
         <script>
             (function () {
@@ -39,7 +43,7 @@
                 };
                 var to = d.getElementsByTagName('script')[0];
                 to.parentNode.insertBefore(s, to);
-            })();</script><a href="https://1map.com/nl/map-embed">1 Map</a> <br/>
+            })();</script><a href="https://1map.com/nl/map-embed">1 Map</a> <br />
     </div>
 </div>
 
