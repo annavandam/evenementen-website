@@ -366,17 +366,18 @@ input,
 
 
 
-.nieuws {
+.TicketLinkje {
     text-decoration: none;
     background-color: lightsteelblue;
     font-size: 150%;
     padding: 20px;
-    margin-top: 10px;
+    margin-bottom: 70px;
     position: absolute;
     right: 35px;
     left: 35px;
     text-align: center;
     font-size: 18px;
+    border-radius: 10px;
 }
 
 
@@ -384,15 +385,15 @@ input,
     background-color: #edf2f7;
     padding: 3px 10px 0px 8px;
     margin-right: 8%;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     border-radius: 10px;
 }
 
 .vraag {
     background-color: #edf2f7;
-    padding: 3px 10px 60px 8px;
+    padding: 3px 10px 0px 8px;
     margin-right: 8%;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     border-radius: 10px;
 }
 
@@ -400,7 +401,7 @@ input,
     background-color: #edf2f7;
     padding: 3px 10px 30px 8px;
     margin-right: 8%;
-    margin-bottom: 10px;
+    margin-bottom: 90px;
     border-radius: 10px;
 }
 
@@ -416,4 +417,8 @@ input,
     margin-right: 8%;
     margin-bottom: 10px;
     border-radius: 10px;
+}
+
+form {
+    margin-bottom: 50px;
 }
