@@ -119,10 +119,31 @@ namespace SchoolTemplate.Controllers
         [HttpPost]
         public IActionResult Contact(PersonModel model)
         {
+            if (!ModelState.IsValid)
+                return View(model);
 
-            return View(model);
+            SavePerson(model);
+            return View();
         }
+        private void SavePerson(PersonModel person)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO contact(voornaam, achternaam, mail, vraag) VALUES(?voornaam, ?achternaam, ?email, ?vraag)", conn);
 
+                cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = person.Voornaam;
+                cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = person.Achternaam;
+                cmd.Parameters.Add("?email", MySqlDbType.Text).Value = person.Email;
+                cmd.Parameters.Add("?vraag", MySqlDbType.Text).Value = person.Vraag;
+                cmd.ExecuteNonQuery();
+            }
+        }
+        [Route("gelukt")]
+        public IActionResult Gelukt()
+        {
+            return View();
+        }
 
         [Route("festival/{id}/{naam}")]
         public IActionResult Festival(string id)

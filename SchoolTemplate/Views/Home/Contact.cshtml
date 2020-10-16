@@ -3,29 +3,41 @@
     ViewData["Title"] = "Contact";
 }
 <h2>Contact</h2>
-@if (Model != null)
-{
-    <p>
-        Over ons:
-    </p>
-    <p2>
-        Festivalterrein de Appelbal <br/>
+<div class="festivaltereininfo">
+<p>
+    Over ons:
+</p>
+<p2>
+    Festivalterrein de Appelbal <br />
 
-        Oude Vest 33e <br />
+    Oude Vest 33e <br />
 
-        2312 XR te Gronongen <br />
+    2312 XR te Gronongen <br />
 
-        Telefoon: 071- 5141036 <br />
+    Telefoon: 071- 5141036 <br />
 
-        Het festivalterrein is uitsluitend geopend tijdens voorstellingen. <br />
-    </p2>
-</div>
+    Het festivalterrein is uitsluitend geopend tijdens voorstellingen. <br />
+</p2>
+    </div>
 
 <div class="Route">
-    <p>
-
-
-    </p>
+    <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+        <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+        <script>
+            (function () {
+                var setting = { "height": 531, "width": 803, "zoom": 11, "queryString": "Hongerige Wolf, Nederland", "place_id": "ChIJQxHv2HsztkcRGNPFHGSNlNk", "satellite": false, "centerCoord": [53.21511267105502, 7.131667700000004], "cid": "0xd9948d641cc5d318", "lang": "nl", "cityUrl": "/germany/papenburg-17210", "cityAnchorText": "Kaart van Papenburg, Nedersaksen, Duitsland", "id": "map-9cd199b9cc5410cd3b1ad21cab2e54d3", "embed_id": "284330" };
+                var d = document;
+                var s = d.createElement('script');
+                s.src = 'https://1map.com/js/script-for-user.js?embed_id=284330';
+                s.async = true;
+                s.onload = function (e) {
+                    window.OneMap.initMap(setting)
+                };
+                var to = d.getElementsByTagName('script')[0];
+                to.parentNode.insertBefore(s, to);
+            })();</script><a href="https://1map.com/nl/map-embed">1 Map</a>
+    </div>
+</div>
 
 
 </div>
@@ -34,21 +46,21 @@
     <p4>
         Vragen?
     </p4>
-        <form method="post">
-            <p5> Voornaam:</p5>
-            <input type="text" name="voornaam" placeholder="Robin" />
-            @Html.ValidationMessageFor(m => m.Voornaam) <br />
-            <p6>Achternaam:</p6>
-            <input type="text" name="achternaam" placeholder="Jansen" />
-            @Html.ValidationMessageFor(m => m.Achternaam) <br />
-            <p7>Mail:</p7>
-            <input type="text" name="email" placeholder="robin123@gmail.com" />
-            @Html.ValidationMessageFor(m => m.Email) <br />
-            <p8>Uw vraag:</p8>
-            <input type="text" name="vraag" placeholder="Welke datum is dit festival: ... ?" />
-            @Html.ValidationMessageFor(m => m.Vraag) <br />
-            <input type="submit" value="vestuur" />
-        </form>
+    <form method="post">
+        <p5> Voornaam:</p5>
+        <input type="text" name="voornaam" placeholder="Robin" />
+        @Html.ValidationMessageFor(m => m.Voornaam) <br />
+        <p6>Achternaam:</p6>
+        <input type="text" name="achternaam" placeholder="Jansen" />
+        @Html.ValidationMessageFor(m => m.Achternaam) <br />
+        <p7>Mail:</p7>
+        <input type="text" name="email" placeholder="robin123@gmail.com" />
+        @Html.ValidationMessageFor(m => m.Email) <br />
+        <p8>Uw vraag:</p8>
+        <input type="text" name="vraag" placeholder="Welke datum is dit festival: ... ?" />
+        @Html.ValidationMessageFor(m => m.Vraag) <br />
+        <input type="submit" value="vestuur" />
+    </form>
 
 
 </div>
@@ -58,7 +70,9 @@
     <p>
         Je voornaam is: @Model.Voornaam <br />
         Je achternaam is: @Model.Achternaam <br />
-        Je Email is: @Model.Email <br/>
-        Je vraag is: @Model.Vraag <br/>
+        Je Email is: @Model.Email <br />
+        Je vraag is: @Model.Vraag <br />
     </p>
 }
+
+
