@@ -366,18 +366,17 @@ input,
 
 
 
-.TicketLinkje {
+.nieuws {
     text-decoration: none;
     background-color: lightsteelblue;
     font-size: 150%;
     padding: 20px;
-    margin-bottom: 100px;
+    margin-top: 10px;
     position: absolute;
     right: 35px;
     left: 35px;
     text-align: center;
     font-size: 18px;
-    border-radius: 10px;
 }
 
 
@@ -385,13 +384,13 @@ input,
     background-color: #edf2f7;
     padding: 3px 10px 0px 8px;
     margin-right: 8%;
-    margin-bottom: 10px;
+    margin-bottom: 80px;
     border-radius: 10px;
 }
 
 .vraag {
     background-color: #edf2f7;
-    padding: 3px 10px 0px 8px;
+    padding: 3px 10px 60px 8px;
     margin-right: 8%;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -399,7 +398,7 @@ input,
 
 .festivaltereininfo {
     background-color: #edf2f7;
-    padding: 3px 10px 0px 8px;
+    padding: 3px 10px 30px 8px;
     margin-right: 8%;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -411,10 +410,10 @@ input,
     background-size: cover;
 }
 
-.logo {
-    padding: 150px 25px;
-    margin: 50px;
-    background-image: url(/img/favicon.png);
-    background-position: center;
-    background-repeat: no-repeat;
+.route {
+    background-color: #edf2f7;
+    padding: 3px 10px 30px 8px;
+    margin-right: 8%;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
